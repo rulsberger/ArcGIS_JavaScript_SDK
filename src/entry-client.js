@@ -1,6 +1,7 @@
 import './style.css'
 import { coordinate_widget } from './coordinate_widget';
-import { buttons_widget } from './buttons_widget';
+import { basemapsWidget } from './basemapsWidget';
+import { zoomToWidget } from './zoomToWidget'
 
 import esriConfig from "@arcgis/core/config";
 import Map from "@arcgis/core/Map";
@@ -80,7 +81,8 @@ const theView = new MapView({
   zoom: 15
 });
 
-buttons_widget(theMap, theView);
+basemapsWidget(theMap, theView);
+zoomToWidget(theView);
 coordinate_widget(theView);
 
 console.log( "Number of layers: " + theMap.layers.length );
