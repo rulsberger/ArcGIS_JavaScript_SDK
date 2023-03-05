@@ -1,5 +1,4 @@
 import './style.css'
-// import {  } from './'
 
 import esriConfig from "@arcgis/core/config";
 import Map from "@arcgis/core/Map";

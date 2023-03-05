@@ -1,6 +1,14 @@
 /* Note: these CSS settings cause the map to fill the browser window */
 html,
 body,
+#app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}
 #viewDiv {
   height: 100%;
   width: 100%;
