@@ -3,6 +3,9 @@ import { coordinate_widget } from './coordinate_widget';
 import { mapToolsWidget } from './mapToolsWidget';
 import { homeLocateWidget } from './homeLocateWidget';
 import { zoomToWidget } from './zoomToWidget'
+import { add_PalmSpringGraphics } from './add_PalmSpringGraphics';
+import { add_GraphicsFromUser } from './add_GraphicsFromUser';
+import { add_Sketch } from './add_Sketch';
 
 import esriConfig from "@arcgis/core/config";
 import Map from "@arcgis/core/Map";
@@ -81,15 +84,13 @@ const theView = new MapView({
   zoom: 15
 });
 
-theView.when( () => {
-
-})
-
-
 mapToolsWidget(theView);
 homeLocateWidget(theView);
 zoomToWidget(theView);
 coordinate_widget(theView);
+add_PalmSpringGraphics(theView);
+add_GraphicsFromUser(theMap, theView);
+add_Sketch(theMap, theView);
 
 console.log( "Number of layers: " + theMap.layers.length );
 
