@@ -1,11 +1,7 @@
 export function render() {
   const html = `
 <div id="viewDiv"></div>
-<div id="basemapBar" class="esri-widget">
-  <h3 class="esri-widget" style="text-align:center">Basemaps</h3>
-  <button id="btn-1" class="esri-widget esri-button">Streets</button>
-  <button id="btn-2" class="esri-widget esri-button">Topographic</button>
-  <button id="btn-3" class="esri-widget esri-button">Imagery</button>
+<div id="mapToolsWidget" class="esri-widget">
 </div>
 <div id="zoomToBar" class="esri-widget">
   <h3 class="esri-widget" style="text-align:center">Zoom To</h3>

@@ -1,3 +1,5 @@
+import ScaleBar from "@arcgis/core/widgets/ScaleBar.js";
+
 export function coordinate_widget(this_view) {
     let coordsWidget = document.createElement("div");
     coordsWidget.id = "coordsWidget";
@@ -28,4 +30,11 @@ export function coordinate_widget(this_view) {
     this_view.on("pointer-move", function (evt) {
     showCoordinates(this_view.toMap({ x: evt.x, y: evt.y }));
     });
+
+    const scaleBarWidget = new ScaleBar({
+        view: this_view,
+        style: "line",
+        unit: "dual"
+    });
+    this_view.ui.add(scaleBarWidget, { position: "bottom-left", index: 0 });
 };

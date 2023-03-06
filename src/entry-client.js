@@ -1,6 +1,7 @@
 import './style.css'
 import { coordinate_widget } from './coordinate_widget';
-import { basemapsWidget } from './basemapsWidget';
+import { mapToolsWidget } from './mapToolsWidget';
+import { homeLocateWidget } from './homeLocateWidget';
 import { zoomToWidget } from './zoomToWidget'
 
 import esriConfig from "@arcgis/core/config";
@@ -8,7 +9,6 @@ import Map from "@arcgis/core/Map";
 import MapView from "@arcgis/core/views/MapView";
 
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer.js";
-import TileLayer from "@arcgis/core/layers/TileLayer.js";
 import VectorTileLayer from "@arcgis/core/layers/VectorTileLayer.js";
 
 esriConfig.apiKey = "AAPK4ff2dc8d743240af819665527f73a7a2NT8tGg68ND_SxUUhSZfMAdGfK0M0ZcII7yTUJRpwvFUlJrKmp-I3LTu11Y1eYeP6";
@@ -81,7 +81,13 @@ const theView = new MapView({
   zoom: 15
 });
 
-basemapsWidget(theMap, theView);
+theView.when( () => {
+
+})
+
+
+mapToolsWidget(theView);
+homeLocateWidget(theView);
 zoomToWidget(theView);
 coordinate_widget(theView);
 
